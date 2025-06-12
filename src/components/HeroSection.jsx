@@ -1,6 +1,6 @@
 import profiler from "../assets/Profiler.png";
 import { useState } from "react";
-import preshtechResume2 from "../assets/PreshTechResume2.pdf";
+import preshtechResume2 from "../assets/PreshtechResume2.pdf";
 const HeroSection = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
