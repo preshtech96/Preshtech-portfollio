@@ -1,4 +1,4 @@
-import profiler from "../assets/profiler.png";
+import profiler from "../assets/Profiler.png";
 import { useState } from "react";
 import preshtechResume2 from "../assets/PreshTechResume2.pdf";
 const HeroSection = () => {
