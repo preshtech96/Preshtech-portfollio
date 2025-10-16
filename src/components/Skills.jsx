@@ -22,9 +22,7 @@ const skills = [
   { name: "TailwindCSS", icon: tailwind },
   { name: "WordPress", icon: worldp },
   { name: "FastAPI", icon: fastapi },
-  { name: "TailwindCSS", icon: tailwind },
-  { name: "WordPress", icon: worldp },
-  { name: "FastAPI", icon: fastapi },
+  
 ];
 
 const Skills = () => {
