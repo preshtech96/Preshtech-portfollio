@@ -5,10 +5,10 @@ import html from "../assets/html.png";
 import github from "../assets/github.png";
 import zustand from "../assets/zustand.jpg";
 import tailwind from "../assets/tailwind.png";
-import worldp from "../assets/worldp.jpg";
+import wordpress from "../assets/worldp.jpg"; 
 import python from "../assets/python.jpg";
 import mongodb from "../assets/mongodb.png";
-import fastapp from "../assets/fastapp.png";
+import fastapi from "../assets/fastapi.png"; 
 
 const skills = [
   { name: "ReactJs", icon: react },
@@ -20,10 +20,8 @@ const skills = [
   { name: "GitHub", icon: github },
   { name: "Zustand", icon: zustand },
   { name: "TailwindCSS", icon: tailwind },
-  { name: "WordPress", icon: worldp },
-  { name: "FastAPI", icon: fastapp },
- 
-  
+  { name: "WordPress", icon: wordpress },
+  { name: "FastAPI", icon: fastapi },
 ];
 
 const Skills = () => {
@@ -33,6 +31,7 @@ const Skills = () => {
         <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
           Framework Skills
         </h2>
+
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
           {skills.map((skill) => (
             <div
