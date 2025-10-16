@@ -19,28 +19,29 @@ const skills = [
   { name: "GitHub", icon: github },
   { name: "Zustand", icon: zustand },
   { name: "TailwindCSS", icon: tailwind },
-  { name: "worldPress", icon: worldp },
-  
-
+  { name: "WordPress", icon: worldp },
 ];
-
 
 const Skills = () => {
   return (
     <section className="py-16 bg-gray-100 text-gray-800">
-      <div className="max-w-5xl mx-auto px-6 ">
+      <div className="max-w-5xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
           Framework Skills
         </h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-15 ">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
           {skills.map((skill) => (
             <div
               key={skill.name}
-              className="flex flex-col items-center p-6 bg-white shadow-md rounded-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer "
+              className="flex flex-col items-center p-6 bg-white shadow-md rounded-lg hover:shadow-xl transition-transform duration-500 cursor-pointer transform hover:-rotate-6 hover:scale-105"
             >
-              <img src={skill.icon} alt={skill.name} className="h-20 w-20 cursor-pointer object-contain " />
-              <p className="mt-3 text-lg font-medium text-gray-700">
+              <img
+                src={skill.icon}
+                alt={skill.name}
+                className="h-20 w-20 object-contain transition-transform duration-500 group-hover:rotate-6"
+              />
+              <p className="mt-3 text-lg font-medium text-gray-700 group-hover:text-orange-500 transition-colors duration-300">
                 {skill.name}
               </p>
             </div>
