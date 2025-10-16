@@ -8,6 +8,7 @@ import tailwind from "../assets/tailwind.png";
 import worldp from "../assets/worldp.jpg";
 import python from "../assets/python.jpg"; 
 import mongodb from "../assets/mongodb.png"; 
+import fastapi from "../assets/fastapi.png"; 
 
 const skills = [
   { name: "ReactJs", icon: react },
@@ -20,6 +21,7 @@ const skills = [
   { name: "Zustand", icon: zustand },
   { name: "TailwindCSS", icon: tailwind },
   { name: "WordPress", icon: worldp },
+  { name: "FastAPI", icon: fastapi },
 ];
 
 const Skills = () => {
