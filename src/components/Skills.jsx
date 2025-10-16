@@ -8,20 +8,20 @@ import tailwind from "../assets/tailwind.png";
 import worldp from "../assets/worldp.jpg";
 import python from "../assets/python.jpg";
 import mongodb from "../assets/mongodb.png";
-import fastapi from "../assets/fastapi.png";
+import fastapp from "../assets/fastapp.png";
 
 const skills = [
   { name: "ReactJs", icon: react },
   { name: "Python", icon: python },
   { name: "MongoDB", icon: mongodb },
   { name: "JavaScript", icon: js },
-  { name: "FastAPI", icon: fastapi },
   { name: "CSS", icon: css },
   { name: "HTML", icon: html },
   { name: "GitHub", icon: github },
   { name: "Zustand", icon: zustand },
   { name: "TailwindCSS", icon: tailwind },
   { name: "WordPress", icon: worldp },
+  { name: "FastAPI", icon: fastapp },
  
   
 ];
