@@ -15,13 +15,14 @@ const skills = [
   { name: "Python", icon: python },
   { name: "MongoDB", icon: mongodb },
   { name: "JavaScript", icon: js },
+  { name: "FastAPI", icon: fastapi },
   { name: "CSS", icon: css },
   { name: "HTML", icon: html },
   { name: "GitHub", icon: github },
   { name: "Zustand", icon: zustand },
   { name: "TailwindCSS", icon: tailwind },
   { name: "WordPress", icon: worldp },
-  { name: "FastAPI", icon: fastapi },
+ 
   
 ];
 
