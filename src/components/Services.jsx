@@ -4,7 +4,7 @@ const services = [
   {
     title: "Frontend Development",
     shortDescription: "I create fast, responsive, and user-friendly web apps...",
-    fullDescription: `Being a skilled Frontend Developer, I create responsive, fast, and user-friendly web applications using HTML, CSS, JavaScript, React, Zustand, Tailwindcss, and GitHub. With a passion for clean code and seamless UI/UX, I turn ideas into interactive, high-performing digital experiences. Bringing your vision to life with modern and engaging web solutions is my priority!`,
+    fullDescription: `Being a skilled Full-Stack Developer, I build responsive, fast, and user-friendly web applications from front to back using HTML, CSS, JavaScript, React, Zustand, TailwindCSS, FastAPI, MongoDB, and GitHub. With a passion for clean code, scalability, and seamless UI/UX, I create interactive, high-performing, and reliable digital experiences. Bringing your vision to life with modern, efficient, and fully integrated web solutions is my priority!`,
   },
   {
     title: "Website Management",
@@ -41,35 +41,37 @@ const Services = () => {
       <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
         Services
       </h2>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service, index) => (
           <div
             key={index}
-            className={`relative p-6 rounded-lg shadow-md transition-all duration-500 cursor-pointer overflow-hidden 
-            ${hoverIndex === index ? "bg-black text-white" : "bg-white text-black"} 
-            hover:scale-105`}
             onMouseEnter={() => setHoverIndex(index)}
             onMouseLeave={() => setHoverIndex(null)}
+            className={`relative p-6 rounded-lg shadow-md overflow-hidden cursor-pointer 
+              transform transition-all duration-[1200ms] ease-in-out 
+              ${hoverIndex === index ? "bg-black text-white scale-105 rotate-1" : "bg-white text-black"}`}
           >
-            {/* Title & Short Description (Before Hover) */}
             <div
-              className={`transition-opacity duration-500 ${hoverIndex === index ? "opacity-0 h-0 overflow-hidden" : "opacity-100 h-auto"}`}
+              className={`transition-all duration-[1000ms] ease-in-out ${
+                hoverIndex === index
+                  ? "opacity-0 translate-y-4 h-0 overflow-hidden"
+                  : "opacity-100 translate-y-0 h-auto"
+              }`}
             >
               <h3 className="font-semibold text-xl">{service.title}</h3>
               <p className="mt-3 text-gray-600">{service.shortDescription}</p>
             </div>
-
-            {/* Full Description (On Hover) */}
             <div
-              className={`transition-opacity duration-500 ${hoverIndex === index ? "opacity-100 h-auto" : "opacity-0 h-0 overflow-hidden"}`}
+              className={`transition-all duration-[1200ms] ease-in-out ${
+                hoverIndex === index
+                  ? "opacity-100 translate-y-0 h-auto"
+                  : "opacity-0 translate-y-4 h-0 overflow-hidden"
+              }`}
             >
-              <p className="text-gray-300">{service.fullDescription}</p>
-            </div>
-
-            <div
-              className={`transition-opacity duration-500 ${hoverIndex === index ? "opacity-100 h-auto" : "opacity-0 h-0 overflow-hidden"}`}
-            >
-              <p className="text-gray-300">{service.fullDescription}</p>
+              <p className="text-gray-300 leading-relaxed">
+                {service.fullDescription}
+              </p>
             </div>
           </div>
         ))}
