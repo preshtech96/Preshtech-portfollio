@@ -13,13 +13,13 @@ const HeroSection = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         <div className="space-y-4">
           <p className="text-sm uppercase tracking-widest text-gray-600">
-            React | Tailwind
+            ReactJs | TailwindCSS | FastAPI | MongoDB | Python
           </p>
-          <h1 className="text-5xl font-bold">FrontEnd Dev</h1>
+          <h1 className="text-5xl font-bold">Fullstack Dev.</h1>
           <p className="text-lg text-gray-700 max-w-md">
-            I am passionate about building clean, scalable, and user-friendly
-            web applications. Specializing in React.js, TailwindCss, and modern
-            front-end technologies.
+            I am passionate about building clean, scalable, and user-friendly web applications.
+             Specializing in React.js, TailwindCSS, FastAPI, MongoDB, and modern
+              full-stack technologies.
             {isExpanded && (
               <>
                 {" "}
@@ -30,12 +30,12 @@ const HeroSection = () => {
             )}
           </p>
           <div className="flex gap-20">
-          <button
-            className="px-6 py-3 bg-black text-blue-600 rounded-md hover:bg-gray-900 transition"
-            onClick={toggleReadMore}
-          >
-            {isExpanded ? "Read less" : "Read more..."}
-          </button>
+            <button
+              className="px-6 py-3 bg-black text-blue-600 rounded-md hover:bg-gray-900 transition"
+              onClick={toggleReadMore}
+            >
+              {isExpanded ? "Read less" : "Read more..."}
+            </button>
             <button>
               <a href={preshtechResume2} download={"PreshTech-CV"}>
                 Download CV
@@ -53,7 +53,7 @@ const HeroSection = () => {
             />
           </div>
 
-          {/* Decorative Elements */}
+          {}
           <div className="absolute top-0 left-0 w-20 h-20 bg-gray-200 rounded-full transform -translate-x-5 -translate-y-5"></div>
           <div className="absolute bottom-5 right-5 w-15 h-15 bg-blue-500 rounded-full"></div>
         </div>
