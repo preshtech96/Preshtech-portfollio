@@ -1,3 +1,4 @@
+
 import profiler from "../assets/Profiler.png";
 import { useState } from "react";
 import preshtechResume2 from "../assets/PreshtechResume2.pdf";
@@ -18,7 +19,7 @@ const HeroSection = () => {
           <h1 className="text-5xl font-bold">Fullstack Dev.</h1>
           <p className="text-lg text-gray-700 max-w-md">
             I am passionate about building clean, scalable, and user-friendly web applications.
-             Specializing in React.js, TailwindCSS, FastAPI, MongoDB, and modern
+             Specializing in React.js, TailwindCSS, FastAPI, MongoDB, Python and modern
               full-stack technologies.
             {isExpanded && (
               <>
@@ -54,8 +55,9 @@ const HeroSection = () => {
           </div>
 
           {}
-          <div className="absolute top-0 left-0 w-20 h-20 bg-gray-200 rounded-full transform -translate-x-5 -translate-y-5"></div>
+          <div className="absolute top-0 left-0 w-20 h-20 bg-orange-400 rounded-full transform -translate-x-5 -translate-y-5"></div>
           <div className="absolute bottom-5 right-5 w-15 h-15 bg-blue-500 rounded-full"></div>
+          <div className="absolute bottom-5 right-5 w-10 h-10 bg-orange-400 rounded-full"></div>
         </div>
       </div>
     </section>
