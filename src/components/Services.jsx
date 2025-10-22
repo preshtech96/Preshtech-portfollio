@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const services = [
   {
-    title: "Frontend Development",
+    title: "Fullstack Dev.",
     shortDescription: "I create fast, responsive, and user-friendly web apps...",
     fullDescription: `Being a skilled Full-Stack Developer, I build responsive, fast, and user-friendly web applications from front to back using HTML, CSS, JavaScript, React, Zustand, TailwindCSS, FastAPI, MongoDB, and GitHub. With a passion for clean code, scalability, and seamless UI/UX, I create interactive, high-performing, and reliable digital experiences. Bringing your vision to life with modern, efficient, and fully integrated web solutions is my priority!`,
   },
@@ -81,3 +81,4 @@ const Services = () => {
 };
 
 export default Services;
+
