@@ -21,17 +21,17 @@ const Contact = () => {
 
     try {
       const response = await emailjs.send(
-        "service_hwhww5b",
-        "template_u5pszcl",
+        "service_9xbdour",
+        "template_86hd4ft",
         formData,
-        "UIedFGGSWSu8roezT"
+        "xpZbUNNEx4Nsh2oD1"
       );
 
-      console.log("Email sent successfully:", response);
+      alert("Email sent successfully:", response);
       setStatus("Message sent successfully!");
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
-      console.error("Error sending email:", error);
+      alert("Error sending email:", error);
       setStatus("Failed to send message. Please try again.");
     }
   };
@@ -143,3 +143,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
