@@ -4,7 +4,7 @@ const services = [
   {
     title: "Fullstack Dev.",
     shortDescription: "I create fast, responsive, and user-friendly web apps...",
-    fullDescription: `Being a skilled Full-Stack Developer, I build responsive, fast, and user-friendly web applications from front to back using HTML, CSS, JavaScript, React, Zustand, TailwindCSS, FastAPI, MongoDB, and GitHub. With a passion for clean code, scalability, and seamless UI/UX, I create interactive, high-performing, and reliable digital experiences. Bringing your vision to life with modern, efficient, and fully integrated web solutions is my priority!`,
+    fullDescription: `Being a skilled Full-Stack Developer, I build responsive, fast, and user-friendly web applications from front to back using HTML, CSS, JavaScript, React, Zustand, TailwindCSS, FastAPI, Python, MongoDB, and GitHub. With a passion for clean code, scalability, and seamless UI/UX, I create interactive, high-performing, and reliable digital experiences. Bringing your vision to life with modern, efficient, and fully integrated web solutions is my priority!`,
   },
   {
     title: "Website Management",
@@ -19,7 +19,7 @@ const services = [
   {
     title: "On/Offline Coaching",
     shortDescription: "I empower developers with hands-on coaching...",
-    fullDescription: `I empower aspiring developers to build real-world skills in HTML, CSS, JavaScript, React, Zustand, TailwindCss, and GitHub through hands-on coaching. Whether you're a beginner or looking to level up, I provide structured guidance, practical projects, and expert insights to help you confidently create and manage modern web applications. Let’s code, collaborate, and elevate your frontend skills together!`,
+    fullDescription: `I empower aspiring developers to build real-world skills in HTML, CSS, JavaScript, React, Zustand, TailwindCss, fastAPI, Python, MongoDB and GitHub through hands-on coaching. Whether you're a beginner or looking to level up, I provide structured guidance, practical projects, and expert insights to help you confidently create and manage modern web applications. Let’s code, collaborate, and elevate your frontend skills together!`,
   },
   {
     title: "General Business Management",
@@ -81,4 +81,5 @@ const Services = () => {
 };
 
 export default Services;
+
 
