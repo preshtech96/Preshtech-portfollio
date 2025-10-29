@@ -1,7 +1,7 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
-import { SiIndeed, SiUpwork } from "react-icons/si";
+import { SiFiverr, SiUpwork } from "react-icons/si";
 import { MdEmail, MdPhone } from "react-icons/md";
 
 const Contact = () => {
@@ -11,9 +11,11 @@ const Contact = () => {
     message: "",
   });
   const [status, setStatus] = useState("");
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -31,6 +33,7 @@ const Contact = () => {
       setStatus("Failed to send message. Please try again.");
     }
   };
+
   return (
     <section className="p-10 bg-gray-800 text-white">
       <h3 className="text-3xl font-bold text-center mb-6">
@@ -69,12 +72,14 @@ const Contact = () => {
         ></textarea>
         <button
           type="submit"
-          className="bg-orange-500 text-orange-500 font-extrabold hover:bg-orange-600 transition p-3 rounded"
+          className="bg-orange-500 text-white font-extrabold hover:bg-orange-600 transition p-3 rounded"
         >
           Submit
         </button>
       </form>
+
       {status && <p className="text-center mt-4">{status}</p>}
+
       <div className="flex flex-col sm:flex-row text-center sm:text-left justify-center items-center gap-5 mt-8">
         <div className="flex items-center gap-2 text-lg">
           <MdEmail className="text-orange-400 text-2xl" />
@@ -89,6 +94,7 @@ const Contact = () => {
           </span>
         </div>
       </div>
+
       <div className="flex justify-center gap-6 mt-8">
         {[
           {
@@ -96,8 +102,8 @@ const Contact = () => {
             link: "https://github.com/preshtech96",
           },
           {
-            icon: <SiIndeed />,
-            link: "https://www.indeed.com/",
+            icon: <SiFiverr />,
+            link: "https://www.fiverr.com/s/KemB4kk",
           },
           {
             icon: <SiUpwork />,
@@ -105,7 +111,7 @@ const Contact = () => {
           },
           {
             icon: <FaLinkedin />,
-            link: "https://www.linkedin.com/in/festus-precious-thompson-oyiboka-3a5243365",
+            link: "https://www.linkedin.com/in/thompson-oyiboka-festus-precious-807932387",
           },
           {
             icon: <FaWhatsapp />,
