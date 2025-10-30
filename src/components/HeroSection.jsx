@@ -1,7 +1,7 @@
 
 import profiler from "../assets/Profiler.png";
 import { useState } from "react";
-import preshtechResume2 from "../assets/PreshtechResume2.pdf";
+import PreshtechCV from "../assets/PreshtechCV.pdf";
 const HeroSection = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -38,7 +38,7 @@ const HeroSection = () => {
               {isExpanded ? "Read less" : "Read more..."}
             </button>
             <button>
-              <a href={preshtechResume2} download={"PreshTech-CV"}>
+              <a href={PreshtechCV} download={"PreshTech-CV"}>
                 Download CV
               </a>
             </button>
@@ -65,3 +65,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
