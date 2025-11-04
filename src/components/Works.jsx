@@ -11,6 +11,11 @@ const works = [
     link: "https://preshtechbiulder.vercel.app/",
   },
   {
+    name: "To-Do-Diary",
+    image: "https://cdn.pixabay.com/photo/2015/05/31/14/23/new-year-background-791939_1280.jpg",
+    link: "https://to-do-diary-sigma.vercel.app/",
+  },
+  {
     name: "Law Firm",
     image: "https://cdn.pixabay.com/photo/2014/05/02/02/19/bookcase-335849_1280.jpg",
     link: "https://lawfirm-eight-theta.vercel.app/",
@@ -115,3 +120,4 @@ const Works = () => {
 };
 
 export default Works;
+
