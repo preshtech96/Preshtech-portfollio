@@ -10,7 +10,6 @@ import {
   Download,
 } from "lucide-react";
 import preshtech from "../assets/preshtech.png";
-import coruse from "../assets/courses-form.pdf";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,6 +43,13 @@ const Navbar = () => {
     setIsOpen(false);
   };
 
+  const openFormPage = () => {
+    window.open(
+      "https://docs.google.com/forms/d/1FFLYFz8f_0VZGW2fS23SSiUPu8VrT82rhu36EcCzh6o/preview",
+      "_blank"
+    );
+  };
+
   return (
     <nav className="bg-gray-800 text-white relative shadow-md">
       <div className="flex justify-between items-center p-4 px-6 md:px-10">
@@ -53,6 +59,8 @@ const Navbar = () => {
             Pres<span className="text-orange-500">HT</span>ech
           </p>
         </div>
+
+        {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 items-center text-orange-300">
           <button
             onClick={() => scrollToSection("services")}
@@ -69,6 +77,8 @@ const Navbar = () => {
             <Home size={18} />
             Works
           </button>
+
+          {/* Free Courses */}
           <div className="relative">
             <button
               onClick={toggleFreeDropdown}
@@ -104,6 +114,8 @@ const Navbar = () => {
               </div>
             )}
           </div>
+
+          {/* Paid Courses */}
           <div className="relative">
             <button
               onClick={togglePaidDropdown}
@@ -121,7 +133,7 @@ const Navbar = () => {
 
             {showPaidDropdown && (
               <div className="absolute left-0 mt-2 w-80 bg-gray-900 border border-gray-700 rounded-lg shadow-lg py-3 z-50">
-                  {paidCourses.map((course, index) => (
+                {paidCourses.map((course, index) => (
                   <div
                     key={index}
                     className="flex items-center justify-between px-4 py-2 text-orange-300 hover:bg-gray-700 hover:text-orange-500 transition"
@@ -132,16 +144,15 @@ const Navbar = () => {
                 ))}
                 <div className="px-4 pt-4 border-t border-gray-700 mt-2">
                   <p className="text-sm text-gray-400 mb-2 italic">
-                    Note: Please download and fill out the form below to apply.
+                    Note: Please click below to open the application form page.
                   </p>
-                  <a
-                    href={coruse}
-                    download={"course-form.pdf"}
+                  <button
+                    onClick={openFormPage}
                     className="flex items-center justify-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition"
                   >
                     <Download size={18} />
-                    Download Form
-                  </a>
+                    Open Form Page
+                  </button>
                 </div>
               </div>
             )}
@@ -155,12 +166,16 @@ const Navbar = () => {
             Contact
           </button>
         </div>
+
+        {/* Mobile Menu Toggle */}
         <div className="md:hidden">
           <button className="text-orange-400" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
         </div>
       </div>
+
+      {/* Mobile Dropdown */}
       {isOpen && (
         <div className="w-full bg-gray-900 border-t border-gray-700 flex flex-col text-orange-300 py-4 md:hidden max-h-[75vh] overflow-y-auto">
           <button
@@ -175,6 +190,7 @@ const Navbar = () => {
           >
             <Home size={18} /> Works
           </button>
+
           <div className="px-6 mt-2">
             <button
               onClick={togglePaidDropdown}
@@ -204,16 +220,15 @@ const Navbar = () => {
                 ))}
                 <div className="px-4 pt-3 border-t border-gray-700 mt-2 mb-2">
                   <p className="text-xs text-gray-400 mb-2 italic">
-                    Note: Please download and fill out the form below to apply.
+                    Note: Click below to open the application form page.
                   </p>
-                  <a
-                    href="/files/course-form.pdf"
-                    download
+                  <button
+                    onClick={openFormPage}
                     className="flex items-center justify-center gap-2 bg-orange-500 text-white text-sm px-3 py-2 rounded-lg hover:bg-orange-600 transition"
                   >
                     <Download size={14} />
-                    Download Form
-                  </a>
+                    Open Form Page
+                  </button>
                 </div>
               </div>
             )}
