@@ -9,6 +9,8 @@ import wordpress from "../assets/worldp.jpg";
 import python from "../assets/python.jpg";
 import mongodb from "../assets/mongodb.png";
 import fastapi from "../assets/fastapi.png"; 
+import nextjs from "../assets/nextjs.jpg";
+
 
 const skills = [
   { name: "ReactJs", icon: react },
@@ -22,6 +24,7 @@ const skills = [
   { name: "TailwindCSS", icon: tailwind },
   { name: "WordPress", icon: wordpress },
   { name: "FastAPI", icon: fastapi },
+  { name: "NextJS", icon: nextjs },
 ];
 
 const Skills = () => {
@@ -61,3 +64,4 @@ const Skills = () => {
 };
 
 export default Skills;
+
