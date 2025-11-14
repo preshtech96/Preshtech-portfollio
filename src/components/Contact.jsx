@@ -90,7 +90,7 @@ const Contact = () => {
         <div className="flex items-center gap-2 text-lg">
           <MdPhone className="text-orange-400 text-2xl" />
           <span className="hover:text-orange-500 cursor-pointer">
-            + (234) 166-637-301
+            + (234) 816-663-7301
           </span>
         </div>
       </div>
@@ -115,7 +115,7 @@ const Contact = () => {
           },
           {
             icon: <FaWhatsapp />,
-            link: "https://wa.me/2348066637301",
+            link: "https://wa.me/2348166637301",
           },
         ].map((item, idx) => (
           <a
@@ -138,3 +138,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
