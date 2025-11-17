@@ -27,6 +27,15 @@ const Navbar = () => {
     { title: "NextJS", price: "$278.42" },
   ];
 
+  const freeCourses = [
+    "HTML & CSS Basics",
+    "JavaScript Fundamentals",
+    "Intro to ReactJS",
+    "Python for Beginners",
+    "Getting Started with Git & GitHub",
+    "AI Content Creation",
+  ];
+
   const togglePaidDropdown = () => {
     setShowPaidDropdown((prev) => !prev);
     setShowFreeDropdown(false);
@@ -51,41 +60,34 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-800 text-white relative shadow-md">
+    <nav className="bg-gray-800 text-white relative shadow-md z-[999]">
       <div className="flex justify-between items-center p-4 px-6 md:px-10">
         <div className="flex flex-col items-center">
           <img src={preshtech} alt="Logo" className="h-10 w-10" />
-          <p className="text-xl font-bold text-center leading-none -mt-1">
+          <p className="text-xl font-bold leading-none -mt-1">
             Pres<span className="text-orange-500">HT</span>ech
           </p>
         </div>
-
-        {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 items-center text-orange-300">
           <button
             onClick={() => scrollToSection("services")}
             className="flex items-center gap-2 hover:text-orange-500 transition"
           >
-            <Briefcase size={18} />
-            Services
+            <Briefcase size={18} /> Services
           </button>
 
           <button
             onClick={() => scrollToSection("works")}
             className="flex items-center gap-2 hover:text-orange-500 transition"
           >
-            <Home size={18} />
-            Works
+            <Home size={18} /> Works
           </button>
-
-          {/* Free Courses */}
           <div className="relative">
             <button
               onClick={toggleFreeDropdown}
               className="flex items-center gap-1 hover:text-orange-500 transition"
             >
-              <BookOpen size={18} />
-              Free Courses
+              <BookOpen size={18} /> Free Courses
               <ChevronDown
                 size={16}
                 className={`transform transition-transform ${
@@ -93,16 +95,10 @@ const Navbar = () => {
                 }`}
               />
             </button>
+
             {showFreeDropdown && (
               <div className="absolute left-0 mt-2 w-56 bg-gray-900 border border-gray-700 rounded-lg shadow-lg py-2 z-50">
-                {[
-                  "HTML & CSS Basics",
-                  "JavaScript Fundamentals",
-                  "Intro to ReactJS",
-                  "Python for Beginners",
-                  "Getting Started with Git & GitHub",
-                  "AI Content Creation",
-                ].map((course, index) => (
+                {freeCourses.map((course, index) => (
                   <button
                     key={index}
                     onClick={() => scrollToSection("contact")}
@@ -114,15 +110,12 @@ const Navbar = () => {
               </div>
             )}
           </div>
-
-          {/* Paid Courses */}
           <div className="relative">
             <button
               onClick={togglePaidDropdown}
               className="flex items-center gap-1 hover:text-orange-500 transition"
             >
-              <BookOpen size={18} />
-              Paid Courses
+              <BookOpen size={18} /> Paid Courses
               <ChevronDown
                 size={16}
                 className={`transform transition-transform ${
@@ -136,12 +129,13 @@ const Navbar = () => {
                 {paidCourses.map((course, index) => (
                   <div
                     key={index}
-                    className="flex items-center justify-between px-4 py-2 text-orange-300 hover:bg-gray-700 hover:text-orange-500 transition"
+                    className="flex justify-between px-4 py-2 text-orange-300 hover:bg-gray-700 hover:text-orange-500 transition"
                   >
                     <span>{course.title}</span>
                     <span className="text-sm text-gray-400">{course.price}</span>
                   </div>
                 ))}
+
                 <div className="px-4 pt-4 border-t border-gray-700 mt-2">
                   <p className="text-sm text-gray-400 mb-2 italic">
                     Note: Please click below to open the application form page.
@@ -162,43 +156,71 @@ const Navbar = () => {
             onClick={() => scrollToSection("contact")}
             className="flex items-center gap-2 hover:text-orange-500 transition"
           >
-            <Mail size={18} />
-            Contact
+            <Mail size={18} /> Contact
           </button>
         </div>
-
-        {/* Mobile Menu Toggle */}
         <div className="md:hidden">
           <button className="text-orange-400" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
         </div>
       </div>
-
-      {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="w-full bg-gray-900 border-t border-gray-700 flex flex-col text-orange-300 py-4 md:hidden max-h-[75vh] overflow-y-auto">
+        <div className="w-full bg-gray-900 border-t border-gray-700 flex flex-col text-orange-300 py-4 md:hidden max-h-[75vh] overflow-y-auto z-[999]">
+
           <button
             onClick={() => scrollToSection("services")}
             className="flex items-center gap-2 px-6 py-2 hover:bg-gray-700 hover:text-orange-500 transition"
           >
             <Briefcase size={18} /> Services
           </button>
+
           <button
             onClick={() => scrollToSection("works")}
             className="flex items-center gap-2 px-6 py-2 hover:bg-gray-700 hover:text-orange-500 transition"
           >
             <Home size={18} /> Works
           </button>
+          <div className="px-6 mt-2 relative z-[999]">
+            <button
+              onClick={toggleFreeDropdown}
+              className="flex items-center justify-between w-full py-3 hover:text-orange-500 transition"
+            >
+              <span className="flex items-center gap-2">
+                <BookOpen size={18} /> Free Courses
+              </span>
 
-          <div className="px-6 mt-2">
+              <ChevronDown
+                size={16}
+                className={`transform transition-transform ${
+                  showFreeDropdown ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+
+            {showFreeDropdown && (
+              <div className="rounded-lg mt-2 max-h-64 overflow-y-scroll border border-gray-700 shadow-xl relative z-[999]">
+                {freeCourses.map((course, index) => (
+                  <button
+                    key={index}
+                    onClick={() => scrollToSection("contact")}
+                    className="block w-full text-left px-4 py-3 text-orange-300 hover:bg-gray-700 hover:text-orange-500 transition"
+                  >
+                    {course}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+          <div className="px-6 mt-4 relative z-[999]">
             <button
               onClick={togglePaidDropdown}
-              className="flex items-center justify-between w-full py-2 hover:text-orange-500 transition"
+              className="flex items-center justify-between w-full py-3 hover:text-orange-500 transition"
             >
               <span className="flex items-center gap-2">
                 <BookOpen size={18} /> Paid Courses
               </span>
+
               <ChevronDown
                 size={16}
                 className={`transform transition-transform ${
@@ -208,17 +230,18 @@ const Navbar = () => {
             </button>
 
             {showPaidDropdown && (
-              <div className="bg-gray-800 rounded-lg mt-1 max-h-64 overflow-y-auto">
+              <div className="bg-gray-800 rounded-lg mt-2 max-h-72 overflow-y-scroll border border-gray-700 shadow-xl relative z-[999]">
                 {paidCourses.map((course, index) => (
                   <div
                     key={index}
-                    className="flex items-center justify-between px-4 py-2 text-orange-300 hover:bg-gray-700 hover:text-orange-500 transition"
+                    className="flex justify-between px-4 py-3 text-orange-300 hover:bg-gray-700 hover:text-orange-500 transition"
                   >
                     <span className="text-sm">{course.title}</span>
                     <span className="text-xs text-gray-400">{course.price}</span>
                   </div>
                 ))}
-                <div className="px-4 pt-3 border-t border-gray-700 mt-2 mb-2">
+
+                <div className="px-4 pt-3 border-t border-gray-700 mt-2 mb-3">
                   <p className="text-xs text-gray-400 mb-2 italic">
                     Note: Click below to open the application form page.
                   </p>
