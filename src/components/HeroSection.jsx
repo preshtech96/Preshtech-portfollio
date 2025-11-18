@@ -1,5 +1,6 @@
 
 import profiler from "../assets/Profiler.png";
+import ptt from "../assets/ptt.jpg";
 import { useState } from "react";
 import PreshtechCV from "../assets/PreshtechCV.pdf";
 const HeroSection = () => {
@@ -48,7 +49,7 @@ const HeroSection = () => {
         <div className="relative flex justify-center">
           <div className="h-[90%] w-[90%]">
             <img
-              src={profiler}
+              src={ptt}
               alt="Profile"
               className="object-contain h-[80%] w-[80%] rounded-[50%] "
             />
@@ -65,4 +66,5 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
 
