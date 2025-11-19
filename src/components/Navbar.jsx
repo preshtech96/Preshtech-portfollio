@@ -31,7 +31,6 @@ const Navbar = () => {
     "HTML & CSS Basics",
     "JavaScript Fundamentals",
     "Intro to ReactJS",
-    "Python for Beginners",
     "Getting Started with Git & GitHub",
     "AI Content Creation",
   ];
@@ -69,21 +68,20 @@ const Navbar = () => {
           </p>
         </div>
         <div className="hidden md:flex space-x-8 items-center text-orange-300">
-          <button
+          <div
             onClick={() => scrollToSection("services")}
-            className="flex items-center gap-2 hover:text-orange-500 transition"
+            className="flex items-center gap-2 hover:text-orange-500 transition cursor-pointer"
           >
             <Briefcase size={18} /> Services
-          </button>
-
-          <button
+          </div>
+          <div
             onClick={() => scrollToSection("works")}
-            className="flex items-center gap-2 hover:text-orange-500 transition"
+            className="flex items-center gap-2 hover:text-orange-500 transition cursor-pointer"
           >
             <Home size={18} /> Works
-          </button>
-          <div className="relative">
-            <button
+          </div>
+          <div className="relative cursor-pointer">
+            <div
               onClick={toggleFreeDropdown}
               className="flex items-center gap-1 hover:text-orange-500 transition"
             >
@@ -94,24 +92,24 @@ const Navbar = () => {
                   showFreeDropdown ? "rotate-180" : ""
                 }`}
               />
-            </button>
+            </div>
 
             {showFreeDropdown && (
               <div className="absolute left-0 mt-2 w-56 bg-gray-900 border border-gray-700 rounded-lg shadow-lg py-2 z-50">
                 {freeCourses.map((course, index) => (
-                  <button
+                  <div
                     key={index}
                     onClick={() => scrollToSection("contact")}
-                    className="block w-full text-left px-4 py-2 text-orange-300 hover:bg-gray-700 hover:text-orange-500 transition"
+                    className="w-full px-4 py-2 text-orange-300 hover:bg-gray-700 hover:text-orange-500 transition cursor-pointer"
                   >
                     {course}
-                  </button>
+                  </div>
                 ))}
               </div>
             )}
           </div>
-          <div className="relative">
-            <button
+          <div className="relative cursor-pointer">
+            <div
               onClick={togglePaidDropdown}
               className="flex items-center gap-1 hover:text-orange-500 transition"
             >
@@ -122,14 +120,14 @@ const Navbar = () => {
                   showPaidDropdown ? "rotate-180" : ""
                 }`}
               />
-            </button>
+            </div>
 
             {showPaidDropdown && (
-              <div className="absolute left-0 mt-2 w-80 bg-gray-900 border border-gray-700 rounded-lg shadow-lg py-3 z-50">
+              <div className="absolute left-0 mt-2 w-70 bg-gray-900 border border-gray-700 rounded-lg shadow-lg py-3 z-50">
                 {paidCourses.map((course, index) => (
                   <div
                     key={index}
-                    className="flex justify-between px-4 py-2 text-orange-300 hover:bg-gray-700 hover:text-orange-500 transition"
+                    className="flex justify-between px-4 py-2 text-orange-300 hover:bg-gray-700 hover:text-orange-500 transition cursor-pointer"
                   >
                     <span>{course.title}</span>
                     <span className="text-sm text-gray-400">{course.price}</span>
@@ -140,51 +138,54 @@ const Navbar = () => {
                   <p className="text-sm text-gray-400 mb-2 italic">
                     Note: Please click below to open the application form page.
                   </p>
-                  <button
+
+                  <div
                     onClick={openFormPage}
-                    className="flex items-center justify-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition"
+                    className="flex items-center justify-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition cursor-pointer"
                   >
                     <Download size={18} />
                     Open Form Page
-                  </button>
+                  </div>
                 </div>
               </div>
             )}
           </div>
-
-          <button
+          <div
             onClick={() => scrollToSection("contact")}
-            className="flex items-center gap-2 hover:text-orange-500 transition"
+            className="flex items-center gap-2 hover:text-orange-500 transition cursor-pointer"
           >
             <Mail size={18} /> Contact
-          </button>
+          </div>
         </div>
         <div className="md:hidden">
-          <button className="text-orange-400" onClick={() => setIsOpen(!isOpen)}>
+          <div
+            className="text-orange-400 cursor-pointer"
+            onClick={() => setIsOpen(!isOpen)}
+          >
             {isOpen ? <X size={26} /> : <Menu size={26} />}
-          </button>
+          </div>
         </div>
       </div>
       {isOpen && (
         <div className="w-full bg-gray-900 border-t border-gray-700 flex flex-col text-orange-300 py-4 md:hidden max-h-[75vh] overflow-y-auto z-[999]">
 
-          <button
+          <div
             onClick={() => scrollToSection("services")}
-            className="flex items-center gap-2 px-6 py-2 hover:bg-gray-700 hover:text-orange-500 transition"
+            className="flex items-center gap-2 px-6 py-2 hover:bg-gray-700 hover:text-orange-500 transition cursor-pointer"
           >
             <Briefcase size={18} /> Services
-          </button>
+          </div>
 
-          <button
+          <div
             onClick={() => scrollToSection("works")}
-            className="flex items-center gap-2 px-6 py-2 hover:bg-gray-700 hover:text-orange-500 transition"
+            className="flex items-center gap-2 px-6 py-2 hover:bg-gray-700 hover:text-orange-500 transition cursor-pointer"
           >
             <Home size={18} /> Works
-          </button>
+          </div>
           <div className="px-6 mt-2 relative z-[999]">
-            <button
+            <div
               onClick={toggleFreeDropdown}
-              className="flex items-center justify-between w-full py-3 hover:text-orange-500 transition"
+              className="flex items-center justify-between w-full py-3 hover:text-orange-500 transition cursor-pointer"
             >
               <span className="flex items-center gap-2">
                 <BookOpen size={18} /> Free Courses
@@ -196,26 +197,26 @@ const Navbar = () => {
                   showFreeDropdown ? "rotate-180" : ""
                 }`}
               />
-            </button>
+            </div>
 
             {showFreeDropdown && (
-              <div className="rounded-lg mt-2 max-h-64 overflow-y-scroll border border-gray-700 shadow-xl relative z-[999]">
+              <div className="rounded-lg mt-2 max-h-64 overflow-y-scroll border border-gray-700 shadow-xl">
                 {freeCourses.map((course, index) => (
-                  <button
+                  <div
                     key={index}
                     onClick={() => scrollToSection("contact")}
-                    className="block w-full text-left px-4 py-3 text-orange-300 hover:bg-gray-700 hover:text-orange-500 transition"
+                    className="px-4 py-3 text-orange-300 hover:bg-gray-700 hover:text-orange-500 transition cursor-pointer"
                   >
                     {course}
-                  </button>
+                  </div>
                 ))}
               </div>
             )}
           </div>
           <div className="px-6 mt-4 relative z-[999]">
-            <button
+            <div
               onClick={togglePaidDropdown}
-              className="flex items-center justify-between w-full py-3 hover:text-orange-500 transition"
+              className="flex items-center justify-between w-full py-3 hover:text-orange-500 transition cursor-pointer"
             >
               <span className="flex items-center gap-2">
                 <BookOpen size={18} /> Paid Courses
@@ -227,14 +228,14 @@ const Navbar = () => {
                   showPaidDropdown ? "rotate-180" : ""
                 }`}
               />
-            </button>
+            </div>
 
             {showPaidDropdown && (
-              <div className="bg-gray-800 rounded-lg mt-2 max-h-72 overflow-y-scroll border border-gray-700 shadow-xl relative z-[999]">
+              <div className="bg-gray-800 rounded-lg mt-2 max-h-72 overflow-y-scroll border border-gray-700 shadow-xl">
                 {paidCourses.map((course, index) => (
                   <div
                     key={index}
-                    className="flex justify-between px-4 py-3 text-orange-300 hover:bg-gray-700 hover:text-orange-500 transition"
+                    className="flex justify-between px-4 py-3 text-orange-300 hover:bg-gray-700 hover:text-orange-500 transition cursor-pointer"
                   >
                     <span className="text-sm">{course.title}</span>
                     <span className="text-xs text-gray-400">{course.price}</span>
@@ -245,24 +246,25 @@ const Navbar = () => {
                   <p className="text-xs text-gray-400 mb-2 italic">
                     Note: Click below to open the application form page.
                   </p>
-                  <button
+
+                  <div
                     onClick={openFormPage}
-                    className="flex items-center justify-center gap-2 bg-orange-500 text-white text-sm px-3 py-2 rounded-lg hover:bg-orange-600 transition"
+                    className="flex items-center justify-center gap-2 bg-orange-500 text-white text-sm px-3 py-2 rounded-lg hover:bg-orange-600 transition cursor-pointer"
                   >
                     <Download size={14} />
                     Open Form Page
-                  </button>
+                  </div>
                 </div>
               </div>
             )}
           </div>
 
-          <button
+          <div
             onClick={() => scrollToSection("contact")}
-            className="flex items-center gap-2 px-6 py-2 hover:bg-gray-700 hover:text-orange-500 transition"
+            className="flex items-center gap-2 px-6 py-2 hover:bg-gray-700 hover:text-orange-500 transition cursor-pointer"
           >
             <Mail size={18} /> Contact
-          </button>
+          </div>
         </div>
       )}
     </nav>
